@@ -12,7 +12,6 @@
 Projet de machine learning visant à prédire avec précision le volume de trafic routier à partir de données historiques, météorologiques et temporelles.
 Le modèle final (XGBoost optimisé) atteint un **R² de 0.96**, déployé via une application web interactive.
 
-[Voir la démo](https://github.com/firdaouss-7/traffic-prediction/blob/main/README.md#utilisation) · [Rapport détaillé](https://github.com/firdaouss-7/traffic-prediction/blob/main/RAPPORT_FINAL.pdf) · [Signaler un bug](https://github.com/firdaouss-7/traffic-prediction/issues)
 
 </div>
 
