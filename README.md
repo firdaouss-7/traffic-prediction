@@ -1,42 +1,42 @@
 <div align="center">
 
-# 🚦 Traffic Lens
+# Traffic Lens
 ### Prédiction du Volume de Trafic Routier
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)](https://xgboost.readthedocs.io/)
 [![Flask](https://img.shields.io/badge/App-Flask-black?logo=flask)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-green)](#licence)
-[![R²](https://img.shields.io/badge/R²-0.96-success)]()
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![R²](https://img.shields.io/badge/R2-0.96-success)]()
 
 Projet de machine learning visant à prédire avec précision le volume de trafic routier à partir de données historiques, météorologiques et temporelles.
 Le modèle final (XGBoost optimisé) atteint un **R² de 0.96**, déployé via une application web interactive.
 
-[Voir la démo](#utilisation) · [Rapport détaillé](RAPPORT_FINAL.pdf) · [Signaler un bug](../../issues)
+[Voir la démo](https://github.com/firdaouss-7/traffic-prediction/blob/main/README.md#utilisation) · [Rapport détaillé](https://github.com/firdaouss-7/traffic-prediction/blob/main/RAPPORT_FINAL.pdf) · [Signaler un bug](https://github.com/firdaouss-7/traffic-prediction/issues)
 
 </div>
 
 ---
 
-## 📑 Table des Matières
+## Table des Matières
 
-- [Aperçu](#-aperçu)
-- [Problématique](#-problématique)
-- [Données](#-données)
-- [Méthodologie](#-méthodologie)
-- [Résultats](#-résultats)
-- [Installation](#-installation)
-- [Utilisation](#-utilisation)
-- [Structure du Projet](#-structure-du-projet)
-- [Technologies Utilisées](#-technologies-utilisées)
-- [Challenges & Solutions](#-challenges-rencontrés-et-solutions)
-- [Perspectives d'Amélioration](#-perspectives-damélioration)
-- [Auteurs](#-auteurs)
-- [Licence](#-licence)
+- [Aperçu](#aperçu)
+- [Problématique](#problématique)
+- [Données](#données)
+- [Méthodologie](#méthodologie)
+- [Résultats](#résultats)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Structure du Projet](#structure-du-projet)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Challenges & Solutions](#challenges-rencontrés-et-solutions)
+- [Perspectives d'Amélioration](#perspectives-damélioration)
+- [Auteurs](#auteurs)
+- [Licence](#licence)
 
 ---
 
-## 🔎 Aperçu
+## Aperçu
 
 | | |
 |---|---|
@@ -49,7 +49,7 @@ Le modèle final (XGBoost optimisé) atteint un **R² de 0.96**, déployé via u
 
 ---
 
-## 🎯 Problématique
+## Problématique
 
 L'augmentation constante du trafic urbain pose des défis majeurs :
 - Pertes de temps dues aux embouteillages
@@ -65,7 +65,7 @@ L'augmentation constante du trafic urbain pose des défis majeurs :
 
 ---
 
-## 📊 Données
+## Données
 
 ### Source
 
@@ -82,7 +82,7 @@ L'augmentation constante du trafic urbain pose des défis majeurs :
 | Temporelles | `date_time`, `holiday` |
 | Météorologiques | `temp`, `rain_1h`, `snow_1h`, `clouds_all`, `weather_main`, `weather_description` |
 
-### 💡 Insights Clés (Analyse Exploratoire)
+### Insights Clés (Analyse Exploratoire)
 
 **Patterns temporels**
 - Baisse de 50–70 % du trafic le week-end et les jours fériés
@@ -100,7 +100,7 @@ L'augmentation constante du trafic urbain pose des défis majeurs :
 
 ---
 
-## ⚙️ Méthodologie
+## Méthodologie
 
 ### 1. Prétraitement des Données
 
@@ -108,7 +108,7 @@ L'augmentation constante du trafic urbain pose des défis majeurs :
 - Suppression de 17 doublons
 - Élimination de 11 outliers (valeurs météo physiquement impossibles)
 - Remplissage des valeurs manquantes (`holiday` → `'None'`)
-- ✅ Résultat : **48 176 observations propres**
+- Résultat : **48 176 observations propres**
 
 **Feature Engineering — 89 features créées**
 
@@ -133,23 +133,23 @@ Trois modèles entraînés sur le même jeu de données (80 % train / 20 % test)
 
 ---
 
-## 🏆 Résultats
+## Résultats
 
 | Modèle | RMSE ↓ | MAE ↓ | R² ↑ | Temps |
 |---|---|---|---|---|
 | Random Forest | ~450 | ~280 | ~0.94 | Moyen |
 | XGBoost Baseline | ~400 | ~250 | ~0.95 | Rapide |
-| **XGBoost Optimisé** ⭐ | **~367** | **~224** | **~0.96** | Acceptable |
+| **XGBoost Optimisé**  | **~367** | **~224** | **~0.96** | Acceptable |
 
 ### Modèle final : XGBoost Optimisé
-- ✅ Objectif de précision > 95 % **atteint**
+- Objectif de précision > 95 % **atteint**
 - Feature engineering robuste (89 features)
 - Généralisation cohérente sur les données de test
 - Application web déployée et fonctionnelle
 
 ---
 
-## 💻 Installation
+## Installation
 
 ### Prérequis
 - Python 3.8 ou supérieur
@@ -178,7 +178,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 ### Notebooks
 
@@ -211,7 +211,7 @@ Accessible sur **http://localhost:5000**
 
 ---
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 traffic-prediction/
@@ -259,7 +259,7 @@ traffic-prediction/
 
 ---
 
-## 🛠 Technologies Utilisées
+## Technologies Utilisées
 
 | Catégorie | Outils |
 |---|---|
@@ -270,7 +270,7 @@ traffic-prediction/
 
 ---
 
-## 🧩 Challenges Rencontrés et Solutions
+## Challenges Rencontrés et Solutions
 
 | Challenge | Solution |
 |---|---|
@@ -282,7 +282,7 @@ traffic-prediction/
 
 ---
 
-## 📈 Perspectives d'Amélioration
+## Perspectives d'Amélioration
 
 **Court terme**
 - Déploiement cloud (AWS, Heroku, Azure)
@@ -302,7 +302,7 @@ traffic-prediction/
 
 ---
 
-## 👥 Auteurs
+## Auteurs
 
 - **Firdaouss Zai**
 - **Balmir Maryame**
@@ -313,11 +313,11 @@ traffic-prediction/
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT — voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## 📚 Références
+## Références
 
 1. Dataset : [Metro Interstate Traffic Volume – Kaggle](https://www.kaggle.com/)
 2. [XGBoost Documentation](https://xgboost.readthedocs.io/)
