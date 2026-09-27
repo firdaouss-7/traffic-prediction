@@ -333,9 +333,8 @@ traffic-prediction/
 ---
 
 ## Auteurs
-
-- Balmir Maryame
 - Firdaouss Zai
+- Balmir Maryame
 - Soulaimi Ahlam
 
 **Encadré par** : Pr. Sara El-Ateif
